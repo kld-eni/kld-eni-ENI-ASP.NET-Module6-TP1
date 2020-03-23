@@ -1,0 +1,11 @@
+﻿@model Module6.Models.Samourai
+
+<h2>Details</h2>
+
+<div>
+    @Html.Partial("_SamouraiDetails", Model)
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
