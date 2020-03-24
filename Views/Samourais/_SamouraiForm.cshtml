@@ -24,7 +24,15 @@
 <div class="form-group">
     @Html.LabelFor(model => model.Samourai.Arme, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
-        @Html.DropDownListFor(model => model.SelectedWeapon, Model.WeaponsListItems, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.DropDownListFor(model => model.SelectedWeapon, Model.WeaponsListItems, "Aucune", new { htmlAttributes = new { @class = "form-control" } })
         @Html.ValidationMessageFor(model => model.SelectedWeapon, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Samourai.ArtsMartiaux, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.ListBoxFor(model => model.SelectedMartialArts, Model.MartialArtsListItems, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.SelectedMartialArts, "", new { @class = "text-danger" })
     </div>
 </div>

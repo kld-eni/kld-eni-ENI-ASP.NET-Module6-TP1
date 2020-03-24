@@ -1,8 +1,7 @@
 ﻿namespace Module6.Models
 {
-    public class Arme
+    public class Arme : ObjectWithId
     {
-        public int Id { get; set; }
         public string Nom { get; set; }
         public int Degats { get; set; }
     }

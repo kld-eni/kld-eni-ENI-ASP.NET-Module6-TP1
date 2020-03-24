@@ -1,4 +1,4 @@
-﻿@model Module6.Models.Arme
+﻿@model Module6.Models.ArtMartial
 
 @{
     ViewBag.Title = "Delete";
@@ -8,9 +8,8 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Arme</h4>
+    <h4>ArtMartial</h4>
     <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Nom)
@@ -20,18 +19,9 @@
             @Html.DisplayFor(model => model.Nom)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Degats)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Degats)
-        </dd>
-
     </dl>
 
-    @using (Html.BeginForm())
-    {
+    @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

@@ -10,9 +10,14 @@ namespace Module6.ViewModels
     {
         public Samourai Samourai { get; set; }
 
-        [Display(Name = "Arme choisie")]
-        public int SelectedWeapon { get; set; }
+            
+        public int? SelectedWeapon { get; set; }
+
+        [Display(Name = "Arts martiaux maîtrisés")]
+        public List<int> SelectedMartialArts { get; set; } = new List<int>();
 
         public List<SelectListItem> WeaponsListItems { get; set; } = new List<SelectListItem>();
+
+        public List<SelectListItem> MartialArtsListItems { get; set; } = new List<SelectListItem>();
     }
 }
