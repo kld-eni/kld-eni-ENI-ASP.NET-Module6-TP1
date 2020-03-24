@@ -25,6 +25,7 @@ namespace Module6.Data
         {
             modelBuilder.Entity<Samourai>().HasOptional(s => s.Arme).WithOptionalDependent();
             modelBuilder.Entity<Samourai>().HasMany(s => s.ArtsMartiaux).WithMany();
+            modelBuilder.Entity<Samourai>().Ignore(s => s.Potentiel);
             base.OnModelCreating(modelBuilder);
         }
 
