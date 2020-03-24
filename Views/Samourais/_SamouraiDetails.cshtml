@@ -27,10 +27,22 @@
         @Html.DisplayFor(model => model.Arme.Nom)
     </dd>
 
+    <dt>
+        @Html.DisplayNameFor(model => model.ArtsMartiaux)
+    </dt>
+
     @foreach (var artMartial in Model.ArtsMartiaux)
     {
         <dd>
             @Html.DisplayFor(modelItem => artMartial.Nom)
         </dd>
     }
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Potentiel)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Potentiel)
+    </dd>
 </dl>
